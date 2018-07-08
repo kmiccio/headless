@@ -1,3 +1,4 @@
+````
 #############
 Parte 1
 sudo apt update
@@ -45,3 +46,4 @@ driver = webdriver.Chrome(chrome_options=options)
 driver.get('http://nytimes.com')
 print(driver.title)
 ////////////////////////////////////////
+```
