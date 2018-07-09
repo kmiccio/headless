@@ -46,4 +46,39 @@ driver = webdriver.Chrome(chrome_options=options)
 driver.get('http://nytimes.com')
 print(driver.title)
 ////////////////////////////////////////
+
+sudo apt-get install apache2 -y
+sudo nano /etc/apache2/ports.conf
+-> Listen 8080
+sudo service apache2 restart
+sudo apt-get install php libapache2-mod-php
+sudo systemctl restart apache2
+
+sudo nano index.php
+MINUMUN
+
+exec('pkill -9 Xvfb');
+exec('pkill -9 selenium');
+exec('pkill -9 python');
+exec('pkill -9 python3');
+exec('pkill -9 chrome');
+
+from pyvirtualdisplay import Display
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+import sys
+import time
+
+options = webdriver.ChromeOptions()
+options.add_argument('--no-sandbox')
+options.set_headless(headless=True)
+driver = webdriver.Chrome(chrome_options=options)
+
+
 ```
